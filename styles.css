@@ -1,0 +1,79 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100vh;
+  background: #34495e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  position: relative;
+  height: 65px;
+  width: 250px;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 5px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.wrapper::before {
+  content: "Share";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  color: #34495c;
+  font-size: 27px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+}
+.wrapper:hover::before {
+  left: -250px;
+}
+
+.socials {
+  position: absolute;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper:hover .socials {
+  right: 0;
+}
+
+.socials i {
+  font-size: 22px;
+  color: #34495c;
+  transition: all 0.3s linear;
+}
+
+.socials i:hover {
+  transform: scale(1.1);
+}
